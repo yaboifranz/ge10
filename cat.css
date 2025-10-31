@@ -1,0 +1,94 @@
+#catdesc {
+    margin: 0 auto;
+    max-width: 1400px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#cathead {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.catright {
+    margin-left: auto; /* <-- This pushes it all the way to the right */
+    font-size: 40px;
+}
+
+#catdesc h2 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+#catdesc p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+#contain {
+    /* background-color: yellow; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust 300px to your eventbox width */
+    justify-content: center; /* Center the entire grid */
+    gap: 20px;
+    padding: 10px;
+    margin: 0 auto; /* center the whole container on the page */
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.eventbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #e7e7b9;
+    padding: 10px 15px;
+    border: 2px black solid;
+    /* max-width: 500px; */
+}
+
+.imageevent img {
+    height: max-content;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    /* overflow: hidden; */
+    width: 100%;
+    border: 2px black;
+    border-style: dashed;
+}
+
+.titleevent p {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+.exploreevent {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.exploreevent p {
+    font-size: 20px;
+    background-color: #dfdf00b7;
+    padding: 5px;
+    border: 2px black solid;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.exploreevent p:hover {
+    background-color: #000;
+    color: #dfdf00;
+}

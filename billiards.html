@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billiards Tournament | yaboifranz's WPE Journal</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <p>yaboifranz</p>
+        <h4>WPE Journal</h4>
+    </header>
+
+    <main>
+        <div id="headerbutton">
+            <a href="index.html">
+                    <p>
+                        <i class="fa-solid fa-house"></i> Home
+                    </p>
+                </a>
+
+                <a href="church.html">
+                    <p>
+                        <i class="fa-solid fa-place-of-worship"></i> Church
+                    </p>
+                </a>
+
+                <a href="classroom.html">
+                    <p>
+                        <i class="fa-solid fa-school-flag"></i> Classroom
+                    </p>
+                </a>
+
+                <a href="community.html">
+                    <p>
+                        <i class="fa-solid fa-handshake-angle"></i> Community
+                    </p>
+                </a>
+
+                <a href="court.html">
+                    <p>
+                        <i class="fa-solid fa-baseball-bat-ball"></i> Court
+                    </p>
+                </a>
+
+                <a href="culture.html">
+                    <p>
+                        <i class="fa-solid fa-feather-pointed"></i> Culture
+                    </p>
+                </a>
+
+                <a href="aboutme.html">
+                    <p>
+                        <i class="fa-solid fa-circle-question"></i> About Me
+                    </p>
+                </a>
+        </div>
+
+        <div id="infobox">
+            <div id="infoimg">
+                <img src="img/court/event 1 billiards/fe7f0bddf6a75a3edff2e6d90e3a771b.jpeg" alt="Event Image">
+            </div>
+
+            <div id="eventinfo">
+                <h2>Billiards Tournament</h2>
+                    <br>
+                <p>Date: <span id="eventdate">October 22, 2025 | 04:00PM</span></p>
+                <p>Organizer: <span id="eventorganizer">Friend of the Philippine Blue Coast</span></p>
+                <p>Event Type: <span id="eventtype">Court</span></p>
+                <p>Points: <span id="eventpoints">[4] Lead Organizer</span></p>
+            </div>
+        </div>
+
+        <div id="pardiv">
+            <div id="parbuttons">
+                <p class="tab-button active" data-tab="what">What</p>
+                <p class="tab-button" data-tab="sowhat">So What</p>
+                <p class="tab-button" data-tab="nowwhat">Now What</p>
+            </div>
+        
+            <div id="partext">
+                <div id="what" class="tab-content active">
+                    <p>
+This event was the Billiards Tournament held on October 22, 2025, at 4:00 PM. I was both the organizer and one of the players in the 1v1 category. The event was part of our department activities, and a lot of my classmates and friends joined. My job as organizer was to help set up the tables, make sure the matches were scheduled properly, and just keep everything running smoothly. After that, I also got to play, which made it even more fun.                    </p>
+                </div>
+                
+                <div id="sowhat" class="tab-content">
+                    <p>
+I actually had a great time with this one. I didn’t just enjoy organizing, but I also had fun competing with my friends. I ended up winning the 1v1 category, which made the whole thing even better. At first, I thought it would be stressful to organize and play at the same time, but it wasn’t that bad. The only hard part was keeping track of who was next in line to play, but the rest went fine. I liked how everyone was just there to have fun and chill. It reminded me that even simple activities like this can bring people together and help you bond more with classmates.                    </p>
+                </div>
+                
+                <div id="nowwhat" class="tab-content">
+                    <p>
+From this event, I learned that organizing something while also being part of it takes a bit of balance, but it’s doable if you plan it right. It gave me some confidence in handling events, even small ones. I could apply that by helping out with future activities or tournaments. I’ll probably keep joining next time since it was a good mix of fun and teamwork. The benefit of this kind of event is that it brings everyone together in a friendly competition. If I could do it again, I’d maybe add a doubles category to make it more exciting.
+<br><br>
+Because of this activity, I am <strong>more confident in managing and joining activities at the same time.</strong>
+</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery">
+
+            <p>Gallery</p>
+
+            <div id="galimg">
+                <img src="img/court/event 1 billiards/cc7f4de8fcbc035de660296f09f60d6e.jpeg" alt="">
+                <img src="img/court/event 1 billiards/fe7f0bddf6a75a3edff2e6d90e3a771b.jpeg" alt="">
+                <img src="img/court/event 1 billiards/img1.jpeg" alt="">
+                <img src="img/court/event 1 billiards/img2.jpeg" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h4>Hosted on Github Pages</h4>
+        <p>[MMXXV]</p>
+    </footer>
+
+
+    <script>
+        // Wait for the document to be fully loaded before running script
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- This is your existing code for the tabs ---
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    
+                    const targetTabId = button.dataset.tab;
+                    const targetContent = document.getElementById(targetTabId);
+
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    button.classList.add('active');
+                    
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // --- NEW CODE ADDED BELOW ---
+
+            // 1. Find all images inside the #galimg container
+            const galleryImages = document.querySelectorAll('#galimg img');
+
+            // 2. Loop through each image
+            galleryImages.forEach(img => {
+                // 3. Add a click event listener
+                img.addEventListener('click', () => {
+                    // 4. Get the image src and open it in a new tab
+                    const imageSrc = img.src;
+                    window.open(imageSrc, '_blank');
+                });
+            });
+
+        });
+    </script>
+    </body>
+</html>

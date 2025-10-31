@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galilean Fellowship | yaboifranz's WPE Journal</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <p>yaboifranz</p>
+        <h4>WPE Journal</h4>
+    </header>
+
+    <main>
+        <div id="headerbutton">
+            <a href="index.html">
+                    <p>
+                        <i class="fa-solid fa-house"></i> Home
+                    </p>
+                </a>
+
+                <a href="church.html">
+                    <p>
+                        <i class="fa-solid fa-place-of-worship"></i> Church
+                    </p>
+                </a>
+
+                <a href="classroom.html">
+                    <p>
+                        <i class="fa-solid fa-school-flag"></i> Classroom
+                    </p>
+                </a>
+
+                <a href="community.html">
+                    <p>
+                        <i class="fa-solid fa-handshake-angle"></i> Community
+                    </p>
+                </a>
+
+                <a href="court.html">
+                    <p>
+                        <i class="fa-solid fa-baseball-bat-ball"></i> Court
+                    </p>
+                </a>
+
+                <a href="culture.html">
+                    <p>
+                        <i class="fa-solid fa-feather-pointed"></i> Culture
+                    </p>
+                </a>
+
+                <a href="aboutme.html">
+                    <p>
+                        <i class="fa-solid fa-circle-question"></i> About Me
+                    </p>
+                </a>
+        </div>
+
+        <div id="infobox">
+            <div id="infoimg">
+                <img src="img/church/event 1 galilean/img6.jpeg" alt="Event Image">
+            </div>
+
+            <div id="eventinfo">
+                <h2>Galilean Fellowship</h2>
+                    <br>
+                <p>Date: <span id="eventdate">October 09, 2025 | 05:30PM</span></p>
+                <p>Organizer: <span id="eventorganizer">Silliman University Church</span></p>
+                <p>Event Type: <span id="eventtype">Church</span></p>
+                <p>Points: <span id="eventpoints">[1] Participant</span></p>
+            </div>
+        </div>
+
+        <div id="pardiv">
+            <div id="parbuttons">
+                <p class="tab-button active" data-tab="what">What</p>
+                <p class="tab-button" data-tab="sowhat">So What</p>
+                <p class="tab-button" data-tab="nowwhat">Now What</p>
+            </div>
+        
+            <div id="partext">
+                <div id="what" class="tab-content active">
+                    <p>
+So yeah, we had this thing called the Galilean Fellowship at school. It happened at the chapel, lasted like a couple hours, I don’t really remember the exact date. Basically, we just got to know each other, did a short script reading about Elijah and King Ahab, and then talked about it after. The ones who ran it were senior students from the Divinity School, they did all the facilitating stuff, explained things, and made sure we actually talked. My role? Just a participant. I joined the group, listened, shared a few thoughts, and that’s about it. After all that, we had snacks, which was honestly the best part.                    </p>
+                </div>
+                
+                <div id="sowhat" class="tab-content">
+                    <p>
+I mean, yeah, I kinda learned something. Like, I got more comfortable talking about faith stuff with people I didn’t really know. At first, I thought it was gonna be super serious and boring, but it was actually chill and fun. I was surprised that everyone was friendly, and it didn’t feel awkward once we started talking. The seniors leading it were cool — they weren’t preachy or anything, just nice and easy to talk to. The hardest part was probably just forcing myself to speak up, but once I did, it was fine. I liked that we got to eat after and just hang out. It showed me that you can talk about faith and still have a good time. So yeah, it matched my values, I guess, like being part of a group and just being real with people.                    </p>
+                </div>
+                
+                <div id="nowwhat" class="tab-content">
+                    <p>
+Honestly, the whole thing made me see that faith stuff doesn’t always have to be super serious. It can be about hanging out and connecting too. I learned that it’s okay to share what you think, even if you’re not super religious or whatever. I guess I could apply that by joining more activities like this or at least not avoiding them next time. I’d probably join again, but maybe help out a bit more instead of just sitting there. I do see the benefits, it builds community and helps you not feel so disconnected. If I could do it again, I’d probably talk more or maybe try helping the facilitators, but yeah, overall it was alright.
+<br><br>
+Because of this activity, I am <strong>a bit more open to joining stuff like this and actually talking to people instead of just sitting quietly.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery">
+
+            <p>Gallery</p>
+
+            <div id="galimg">
+                <img src="img/church/event 1 galilean/img1.jpeg" alt="">
+                <img src="img/church/event 1 galilean/img2.jpeg" alt="">
+                <img src="img/church/event 1 galilean/img3.jpeg" alt="">
+                <img src="img/church/event 1 galilean/img4.jpeg" alt="">
+                <img src="img/church/event 1 galilean/img5.jpeg" alt="">
+                <img src="img/church/event 1 galilean/img6.jpeg" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h4>Hosted on Github Pages</h4>
+        <p>[MMXXV]</p>
+    </footer>
+
+
+    <script>
+        // Wait for the document to be fully loaded before running script
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- This is your existing code for the tabs ---
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    
+                    const targetTabId = button.dataset.tab;
+                    const targetContent = document.getElementById(targetTabId);
+
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    button.classList.add('active');
+                    
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // --- NEW CODE ADDED BELOW ---
+
+            // 1. Find all images inside the #galimg container
+            const galleryImages = document.querySelectorAll('#galimg img');
+
+            // 2. Loop through each image
+            galleryImages.forEach(img => {
+                // 3. Add a click event listener
+                img.addEventListener('click', () => {
+                    // 4. Get the image src and open it in a new tab
+                    const imageSrc = img.src;
+                    window.open(imageSrc, '_blank');
+                });
+            });
+
+        });
+    </script>
+    </body>
+</html>

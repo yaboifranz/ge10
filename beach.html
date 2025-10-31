@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coastal Clean-Up of Cangmating Beach | yaboifranz's WPE Journal</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <p>yaboifranz</p>
+        <h4>WPE Journal</h4>
+    </header>
+
+    <main>
+        <div id="headerbutton">
+            <a href="index.html">
+                    <p>
+                        <i class="fa-solid fa-house"></i> Home
+                    </p>
+                </a>
+
+                <a href="church.html">
+                    <p>
+                        <i class="fa-solid fa-place-of-worship"></i> Church
+                    </p>
+                </a>
+
+                <a href="classroom.html">
+                    <p>
+                        <i class="fa-solid fa-school-flag"></i> Classroom
+                    </p>
+                </a>
+
+                <a href="community.html">
+                    <p>
+                        <i class="fa-solid fa-handshake-angle"></i> Community
+                    </p>
+                </a>
+
+                <a href="court.html">
+                    <p>
+                        <i class="fa-solid fa-baseball-bat-ball"></i> Court
+                    </p>
+                </a>
+
+                <a href="culture.html">
+                    <p>
+                        <i class="fa-solid fa-feather-pointed"></i> Culture
+                    </p>
+                </a>
+
+                <a href="aboutme.html">
+                    <p>
+                        <i class="fa-solid fa-circle-question"></i> About Me
+                    </p>
+                </a>
+        </div>
+
+        <div id="infobox">
+            <div id="infoimg">
+                <img src="img/community/event 2 beach cleanup/img1.jpeg" alt="Event Image">
+            </div>
+
+            <div id="eventinfo">
+                <h2>Coastal Clean-Up of Cangmating Beach</h2>
+                    <br>
+                <p>Date: <span id="eventdate">October 12 2025 | 05:00AM</span></p>
+                <p>Organizer: <span id="eventorganizer">Friend of the Philippine Blue Coast</span></p>
+                <p>Event Type: <span id="eventtype">Community</span></p>
+                <p>Points: <span id="eventpoints">[3] Assistant Organizer</span></p>
+            </div>
+        </div>
+
+        <div id="pardiv">
+            <div id="parbuttons">
+                <p class="tab-button active" data-tab="what">What</p>
+                <p class="tab-button" data-tab="sowhat">So What</p>
+                <p class="tab-button" data-tab="nowwhat">Now What</p>
+            </div>
+        
+            <div id="partext">
+                <div id="what" class="tab-content active">
+                    <p>
+The Coastal Clean-Up at Cangmating Beach was on October 12, 2025, at 5:00 AM. We gathered early to clean up trash and debris along the shoreline as part of a community service event. I joined with my friends, and we were assigned to collect plastics, bottles, and other waste to help restore the beach’s cleanliness.                    </p>
+                </div>
+                
+                <div id="sowhat" class="tab-content">
+                    <p>
+Waking up early wasn’t easy, but once we got there, it was actually fun. The beach was quiet and peaceful, and cleaning it up with my friends made it feel less like work. I realized how much trash people leave behind and how bad it can get if no one does anything. The most satisfying part was seeing the beach look cleaner after we were done. It made me feel like we actually did something useful.                    </p>
+                </div>
+                
+                <div id="nowwhat" class="tab-content">
+                    <p>
+This event made me more conscious about the environment and how small actions like this can have a big impact. I learned that teamwork really matters when you’re working toward something meaningful. I can apply this by being more mindful about waste and joining more clean-up drives. If I could do it again, I’d bring more gloves and snacks, but yeah, I’d totally join again.
+<br><br>
+Because of this activity, I am <strong>more environmentally aware and motivated to take care of nature.</strong>
+</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery">
+
+            <p>Gallery</p>
+
+            <div id="galimg">
+                <img src="img/community/event 2 beach cleanup/img1.jpeg" alt="">
+                <img src="img/community/event 2 beach cleanup/img2.jpeg" alt="">
+                <img src="img/community/event 2 beach cleanup/img3.jpeg" alt="">
+                <img src="img/community/event 2 beach cleanup/img4.jpeg" alt="">
+                <img src="img/community/event 2 beach cleanup/IMG_2708.PNG" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h4>Hosted on Github Pages</h4>
+        <p>[MMXXV]</p>
+    </footer>
+
+
+    <script>
+        // Wait for the document to be fully loaded before running script
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- This is your existing code for the tabs ---
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    
+                    const targetTabId = button.dataset.tab;
+                    const targetContent = document.getElementById(targetTabId);
+
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    button.classList.add('active');
+                    
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // --- NEW CODE ADDED BELOW ---
+
+            // 1. Find all images inside the #galimg container
+            const galleryImages = document.querySelectorAll('#galimg img');
+
+            // 2. Loop through each image
+            galleryImages.forEach(img => {
+                // 3. Add a click event listener
+                img.addEventListener('click', () => {
+                    // 4. Get the image src and open it in a new tab
+                    const imageSrc = img.src;
+                    window.open(imageSrc, '_blank');
+                });
+            });
+
+        });
+    </script>
+    </body>
+</html>

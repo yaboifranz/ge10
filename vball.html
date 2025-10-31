@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volleyball Dual Meet | yaboifranz's WPE Journal</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <p>yaboifranz</p>
+        <h4>WPE Journal</h4>
+    </header>
+
+    <main>
+        <div id="headerbutton">
+            <a href="index.html">
+                    <p>
+                        <i class="fa-solid fa-house"></i> Home
+                    </p>
+                </a>
+
+                <a href="church.html">
+                    <p>
+                        <i class="fa-solid fa-place-of-worship"></i> Church
+                    </p>
+                </a>
+
+                <a href="classroom.html">
+                    <p>
+                        <i class="fa-solid fa-school-flag"></i> Classroom
+                    </p>
+                </a>
+
+                <a href="community.html">
+                    <p>
+                        <i class="fa-solid fa-handshake-angle"></i> Community
+                    </p>
+                </a>
+
+                <a href="court.html">
+                    <p>
+                        <i class="fa-solid fa-baseball-bat-ball"></i> Court
+                    </p>
+                </a>
+
+                <a href="culture.html">
+                    <p>
+                        <i class="fa-solid fa-feather-pointed"></i> Culture
+                    </p>
+                </a>
+
+                <a href="aboutme.html">
+                    <p>
+                        <i class="fa-solid fa-circle-question"></i> About Me
+                    </p>
+                </a>
+        </div>
+
+        <div id="infobox">
+            <div id="infoimg">
+                <img src="img/court/event 5 volleyball /img1.jpeg" alt="Event Image">
+            </div>
+
+            <div id="eventinfo">
+                <h2>Volleyball Dual Meet</h2>
+                    <br>
+                <p>Date: <span id="eventdate">August 20, 2025 | 09:00AM</span></p>
+                <p>Organizer: <span id="eventorganizer">Silliman University</span></p>
+                <p>Event Type: <span id="eventtype">Court</span></p>
+                <p>Points: <span id="eventpoints">[1] Spectator</span></p>
+            </div>
+        </div>
+
+        <div id="pardiv">
+            <div id="parbuttons">
+                <p class="tab-button active" data-tab="what">What</p>
+                <p class="tab-button" data-tab="sowhat">So What</p>
+                <p class="tab-button" data-tab="nowwhat">Now What</p>
+            </div>
+        
+            <div id="partext">
+                <div id="what" class="tab-content active">
+                    <p>
+The Volleyball Dual Meet was held on August 20, 2025, at 9:00 AM. It was one of the school’s official sports events, featuring different teams competing against each other. I attended as part of the audience with my friends. I didn’t really know much about what was happening, but it was entertaining to watch.                    </p>
+                </div>
+                
+                <div id="sowhat" class="tab-content">
+                    <p>
+Even though I wasn’t playing, it was nice seeing everyone’s energy and teamwork on the court. The players were giving their best and the crowd was cheering them on. I didn’t expect to get into it, but it was actually fun watching. The only hard part was following the score since I didn’t catch all the rules, but it was fine. It was just a good experience seeing how much effort goes into every match.                    </p>
+                </div>
+                
+                <div id="nowwhat" class="tab-content">
+                    <p>
+This event made me appreciate how much dedication athletes put into their sport. I learned that even as a spectator, you can still feel the excitement and team spirit. I could apply that by being more supportive of school activities in general. The benefit of events like this is that they encourage teamwork and healthy competition. If I could do it again, I’d probably stay longer and watch more matches.
+<br><br>
+Because of this activity, I am <strong>more supportive of sports events and the effort athletes put into them.</strong>
+</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery">
+
+            <p>Gallery</p>
+
+            <div id="galimg">
+                <img src="img/court/event 5 volleyball /img1.jpeg" alt="">
+                <img src="img/court/event 5 volleyball /img2.jpeg" alt="">
+                <img src="img/court/event 5 volleyball /img3.jpeg" alt="">
+                <img src="img/court/event 5 volleyball /img5.jpeg" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h4>Hosted on Github Pages</h4>
+        <p>[MMXXV]</p>
+    </footer>
+
+
+    <script>
+        // Wait for the document to be fully loaded before running script
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- This is your existing code for the tabs ---
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    
+                    const targetTabId = button.dataset.tab;
+                    const targetContent = document.getElementById(targetTabId);
+
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    button.classList.add('active');
+                    
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // --- NEW CODE ADDED BELOW ---
+
+            // 1. Find all images inside the #galimg container
+            const galleryImages = document.querySelectorAll('#galimg img');
+
+            // 2. Loop through each image
+            galleryImages.forEach(img => {
+                // 3. Add a click event listener
+                img.addEventListener('click', () => {
+                    // 4. Get the image src and open it in a new tab
+                    const imageSrc = img.src;
+                    window.open(imageSrc, '_blank');
+                });
+            });
+
+        });
+    </script>
+    </body>
+</html>

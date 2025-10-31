@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sto. Niño Orphanage Gift-Giving | yaboifranz's WPE Journal</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <p>yaboifranz</p>
+        <h4>WPE Journal</h4>
+    </header>
+
+    <main>
+        <div id="headerbutton">
+            <a href="index.html">
+                    <p>
+                        <i class="fa-solid fa-house"></i> Home
+                    </p>
+                </a>
+
+                <a href="church.html">
+                    <p>
+                        <i class="fa-solid fa-place-of-worship"></i> Church
+                    </p>
+                </a>
+
+                <a href="classroom.html">
+                    <p>
+                        <i class="fa-solid fa-school-flag"></i> Classroom
+                    </p>
+                </a>
+
+                <a href="community.html">
+                    <p>
+                        <i class="fa-solid fa-handshake-angle"></i> Community
+                    </p>
+                </a>
+
+                <a href="court.html">
+                    <p>
+                        <i class="fa-solid fa-baseball-bat-ball"></i> Court
+                    </p>
+                </a>
+
+                <a href="culture.html">
+                    <p>
+                        <i class="fa-solid fa-feather-pointed"></i> Culture
+                    </p>
+                </a>
+
+                <a href="aboutme.html">
+                    <p>
+                        <i class="fa-solid fa-circle-question"></i> About Me
+                    </p>
+                </a>
+        </div>
+
+        <div id="infobox">
+            <div id="infoimg">
+                <img src="img/community/event 3 donation/5ed6645f98e2056a009010075eb8dfd6.jpeg" alt="Event Image">
+            </div>
+
+            <div id="eventinfo">
+                <h2>Sto. Niño Orphanage Gift-Giving</h2>
+                    <br>
+                <p>Date: <span id="eventdate">October 22, 2025 | 02:30PM</span></p>
+                <p>Organizer: <span id="eventorganizer">College of Computer Studies</span></p>
+                <p>Event Type: <span id="eventtype">Community</span></p>
+                <p>Points: <span id="eventpoints">[1] Participant</span></p>
+            </div>
+        </div>
+
+        <div id="pardiv">
+            <div id="parbuttons">
+                <p class="tab-button active" data-tab="what">What</p>
+                <p class="tab-button" data-tab="sowhat">So What</p>
+                <p class="tab-button" data-tab="nowwhat">Now What</p>
+            </div>
+        
+            <div id="partext">
+                <div id="what" class="tab-content active">
+                    <p>
+The Sto. Niño Orphanage Gift-Giving happened on October 22, 2025, at 2:30 PM. It was an activity for one of our subjects where we donated food, hygiene essentials, and other basic needs like diapers, laundry stuff, and tissues. We also made cards with short messages for the kids to make it a bit more personal.                    </p>
+                </div>
+                
+                <div id="sowhat" class="tab-content">
+                    <p>
+Even though it was a simple activity, it felt good to do something for others. I didn’t expect much at first, but seeing how something small could make a difference really hit me. We didn’t get to stay long, but just knowing we helped was enough. I liked that it wasn’t just about giving material things — it was about showing care. The hardest part was probably just organizing everything, but once it was done, it felt nice to be part of it.                    </p>
+                </div>
+                
+                <div id="nowwhat" class="tab-content">
+                    <p>
+This event reminded me that kindness doesn’t have to be loud or huge to matter. It made me more aware of how important compassion is, even in small acts. I can apply that by being more thoughtful in everyday life, not just during school projects. If I could do it again, I’d want to actually spend more time with the kids and interact with them.
+<br><br>
+Because of this activity, I am <strong>more aware of the value of simple kindness and generosity.</strong>
+</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery">
+
+            <p>Gallery</p>
+
+            <div id="galimg">
+                <img src="img/community/event 3 donation/5ed6645f98e2056a009010075eb8dfd6.jpeg" alt="">
+                <img src="img/community/event 3 donation/img1.jpeg" alt="">
+                <img src="img/community/event 3 donation/img2.jpeg" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h4>Hosted on Github Pages</h4>
+        <p>[MMXXV]</p>
+    </footer>
+
+
+    <script>
+        // Wait for the document to be fully loaded before running script
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- This is your existing code for the tabs ---
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    
+                    const targetTabId = button.dataset.tab;
+                    const targetContent = document.getElementById(targetTabId);
+
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    button.classList.add('active');
+                    
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // --- NEW CODE ADDED BELOW ---
+
+            // 1. Find all images inside the #galimg container
+            const galleryImages = document.querySelectorAll('#galimg img');
+
+            // 2. Loop through each image
+            galleryImages.forEach(img => {
+                // 3. Add a click event listener
+                img.addEventListener('click', () => {
+                    // 4. Get the image src and open it in a new tab
+                    const imageSrc = img.src;
+                    window.open(imageSrc, '_blank');
+                });
+            });
+
+        });
+    </script>
+    </body>
+</html>

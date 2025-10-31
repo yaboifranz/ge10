@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event | yaboifranz's WPE Journal</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <p>yaboifranz</p>
+        <h4>WPE Journal</h4>
+    </header>
+
+    <main>
+        <div id="headerbutton">
+            <a href="index.html">
+                    <p>
+                        <i class="fa-solid fa-house"></i> Home
+                    </p>
+                </a>
+
+                <a href="church.html">
+                    <p>
+                        <i class="fa-solid fa-place-of-worship"></i> Church
+                    </p>
+                </a>
+
+                <a href="classroom.html">
+                    <p>
+                        <i class="fa-solid fa-school-flag"></i> Classroom
+                    </p>
+                </a>
+
+                <a href="community.html">
+                    <p>
+                        <i class="fa-solid fa-handshake-angle"></i> Community
+                    </p>
+                </a>
+
+                <a href="court.html">
+                    <p>
+                        <i class="fa-solid fa-baseball-bat-ball"></i> Court
+                    </p>
+                </a>
+
+                <a href="culture.html">
+                    <p>
+                        <i class="fa-solid fa-feather-pointed"></i> Culture
+                    </p>
+                </a>
+
+                <a href="aboutme.html">
+                    <p>
+                        <i class="fa-solid fa-circle-question"></i> About Me
+                    </p>
+                </a>
+        </div>
+
+        <div id="infobox">
+            <div id="infoimg">
+                <img src="IMG_1191.jpg" alt="Event Image">
+            </div>
+
+            <div id="eventinfo">
+                <h2>The quick brown fox jumps over the lazy dog.</h2>
+                    <br>
+                <p>Date: <span id="eventdate">January 01, 2025</span></p>
+                <p>Organizer: <span id="eventorganizer">Silliman University Church</span></p>
+                <p>Event Type: <span id="eventtype">Church</span></p>
+                <p>Points: <span id="eventpoints">[1] Spectator</span></p>
+            </div>
+        </div>
+
+        <div id="pardiv">
+            <div id="parbuttons">
+                <p class="tab-button active" data-tab="what">What</p>
+                <p class="tab-button" data-tab="sowhat">So What</p>
+                <p class="tab-button" data-tab="nowwhat">Now What</p>
+            </div>
+        
+            <div id="partext">
+                <div id="what" class="tab-content active">
+                    <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste vel temporibus cupiditate autem a qui perferendis libero optio illo explicabo nam eius reiciendis quasi ullam modi, eveniet doloribus est accusamus quibusdam ipsa. Nemo, mollitia laboriosam? Molestias veritatis dicta optio minus delectus accusamus fugit odio, ea sequi, dolorem dignissimos. Quis tempora culpa voluptate molestiae! Quae ipsa, commodi dignissimos quas minima laudantium sunt laborum unde? Quo dolor, molestiae, consequuntur repellat eius alias aperiam est, soluta dolores dolore iste possimus quia voluptatibus tempore perspiciatis. Consequuntur, voluptate distinctio? Reprehenderit dicta voluptates ex deleniti ipsum recusandae, vel eligendi illo explicabo quam odit dolore eius vitae.
+                    </p>
+                </div>
+                
+                <div id="sowhat" class="tab-content">
+                    <p>
+                    Put your reflections and analysis here. Why did this event matter? What did you learn from it? How did it make you feel? This section connects the event to your personal insights.
+                    </p>
+                </div>
+                
+                <div id="nowwhat" class="tab-content">
+                    <p>
+                    What will you do next with this information or experience? What are your future plans? How will this event influence your future actions, beliefs, or studies? This is about application and forward-thinking.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery">
+
+            <p>Gallery</p>
+
+            <div id="galimg">
+                <img src="IMG_1189.jpg" alt="Gallery Image 2">
+                <img src="IMG_1191.jpg" alt="Gallery Image 4">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h4>Hosted on Github Pages</h4>
+        <p>[MMXXV]</p>
+    </footer>
+
+
+    <script>
+        // Wait for the document to be fully loaded before running script
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- This is your existing code for the tabs ---
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    
+                    const targetTabId = button.dataset.tab;
+                    const targetContent = document.getElementById(targetTabId);
+
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    button.classList.add('active');
+                    
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // --- NEW CODE ADDED BELOW ---
+
+            // 1. Find all images inside the #galimg container
+            const galleryImages = document.querySelectorAll('#galimg img');
+
+            // 2. Loop through each image
+            galleryImages.forEach(img => {
+                // 3. Add a click event listener
+                img.addEventListener('click', () => {
+                    // 4. Get the image src and open it in a new tab
+                    const imageSrc = img.src;
+                    window.open(imageSrc, '_blank');
+                });
+            });
+
+        });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Unseen Flame | yaboifranz's WPE Journal</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <p>yaboifranz</p>
+        <h4>WPE Journal</h4>
+    </header>
+
+    <main>
+        <div id="headerbutton">
+            <a href="index.html">
+                    <p>
+                        <i class="fa-solid fa-house"></i> Home
+                    </p>
+                </a>
+
+                <a href="church.html">
+                    <p>
+                        <i class="fa-solid fa-place-of-worship"></i> Church
+                    </p>
+                </a>
+
+                <a href="classroom.html">
+                    <p>
+                        <i class="fa-solid fa-school-flag"></i> Classroom
+                    </p>
+                </a>
+
+                <a href="community.html">
+                    <p>
+                        <i class="fa-solid fa-handshake-angle"></i> Community
+                    </p>
+                </a>
+
+                <a href="court.html">
+                    <p>
+                        <i class="fa-solid fa-baseball-bat-ball"></i> Court
+                    </p>
+                </a>
+
+                <a href="culture.html">
+                    <p>
+                        <i class="fa-solid fa-feather-pointed"></i> Culture
+                    </p>
+                </a>
+
+                <a href="aboutme.html">
+                    <p>
+                        <i class="fa-solid fa-circle-question"></i> About Me
+                    </p>
+                </a>
+        </div>
+
+        <div id="infobox">
+            <div id="infoimg">
+                <img src="img/classroom/event 4 unseen flame/img5.jpeg" alt="Event Image">
+            </div>
+
+            <div id="eventinfo">
+                <h2>The Unseen Flame</h2>
+                    <br>
+                <p>Date: <span id="eventdate">September 27, 2025 | 07:00PM</span></p>
+                <p>Organizer: <span id="eventorganizer">Silliman University Culture and Arts Council</span></p>
+                <p>Event Type: <span id="eventtype">Classroom</span></p>
+                <p>Points: <span id="eventpoints">[1] Spectator</span></p>
+            </div>
+        </div>
+
+        <div id="pardiv">
+            <div id="parbuttons">
+                <p class="tab-button active" data-tab="what">What</p>
+                <p class="tab-button" data-tab="sowhat">So What</p>
+                <p class="tab-button" data-tab="nowwhat">Now What</p>
+            </div>
+        
+            <div id="partext">
+                <div id="what" class="tab-content active">
+                    <p>
+The Unseen Flame was another performance we watched, held on September 27, 2025, at 7:00 PM. This one focused on Japanese culture with a mix of music, dance, and storytelling. It had that traditional vibe but also some modern touches, which made it really interesting to watch. My role was just being part of the audience, taking it all in.                    </p>
+                </div>
+                
+                <div id="sowhat" class="tab-content">
+                    <p>
+It was honestly nice to see something different from the usual stuff we watch at school. I liked how it showed a lot of Japanese traditions and how detailed their performances are. I didn’t expect to enjoy it that much, but it was calming and kind of cool to see how much culture is packed into their art. The visuals and sounds were on point. I didn’t really learn a skill, but I did learn to appreciate cultural performances more. The hardest part was just staying focused the whole time since I zoned out a bit, not gonna lie, but overall it was relaxing and enjoyable.                    </p>
+                </div>
+                
+                <div id="nowwhat" class="tab-content">
+                    <p>
+The experience made me realize how diverse and creative different cultures can be. It’s not just about entertainment, it’s about expression and history too. I can apply that by being more open to watching and learning from other cultural events. I’d probably go again if they held something similar. The benefit of this kind of activity is that it helps you understand other cultures better and gives you a break from the usual academic grind. If I could do it again, I’d probably pay a bit more attention and maybe take some photos for memory’s sake.
+<br><br>
+Because of this activity, I am <strong>more appreciative of cultural performances and the effort that goes into making them.</strong>
+</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery">
+
+            <p>Gallery</p>
+
+            <div id="galimg">
+                <img src="img/classroom/event 4 unseen flame/img1.jpeg" alt="">
+                <img src="img/classroom/event 4 unseen flame/img2.jpeg" alt="">
+                <img src="img/classroom/event 4 unseen flame/img3.jpeg" alt="">
+                <img src="img/classroom/event 4 unseen flame/img4.jpeg" alt="">
+                <img src="img/classroom/event 4 unseen flame/img5.jpeg" alt="">
+                <img src="img/classroom/event 4 unseen flame/img6.jpeg" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h4>Hosted on Github Pages</h4>
+        <p>[MMXXV]</p>
+    </footer>
+
+
+    <script>
+        // Wait for the document to be fully loaded before running script
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- This is your existing code for the tabs ---
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    
+                    const targetTabId = button.dataset.tab;
+                    const targetContent = document.getElementById(targetTabId);
+
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    button.classList.add('active');
+                    
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // --- NEW CODE ADDED BELOW ---
+
+            // 1. Find all images inside the #galimg container
+            const galleryImages = document.querySelectorAll('#galimg img');
+
+            // 2. Loop through each image
+            galleryImages.forEach(img => {
+                // 3. Add a click event listener
+                img.addEventListener('click', () => {
+                    // 4. Get the image src and open it in a new tab
+                    const imageSrc = img.src;
+                    window.open(imageSrc, '_blank');
+                });
+            });
+
+        });
+    </script>
+    </body>
+</html>

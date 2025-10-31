@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parada Sillimaniana | yaboifranz's WPE Journal</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <p>yaboifranz</p>
+        <h4>WPE Journal</h4>
+    </header>
+
+    <main>
+        <div id="headerbutton">
+            <a href="index.html">
+                    <p>
+                        <i class="fa-solid fa-house"></i> Home
+                    </p>
+                </a>
+
+                <a href="church.html">
+                    <p>
+                        <i class="fa-solid fa-place-of-worship"></i> Church
+                    </p>
+                </a>
+
+                <a href="classroom.html">
+                    <p>
+                        <i class="fa-solid fa-school-flag"></i> Classroom
+                    </p>
+                </a>
+
+                <a href="community.html">
+                    <p>
+                        <i class="fa-solid fa-handshake-angle"></i> Community
+                    </p>
+                </a>
+
+                <a href="court.html">
+                    <p>
+                        <i class="fa-solid fa-baseball-bat-ball"></i> Court
+                    </p>
+                </a>
+
+                <a href="culture.html">
+                    <p>
+                        <i class="fa-solid fa-feather-pointed"></i> Culture
+                    </p>
+                </a>
+
+                <a href="aboutme.html">
+                    <p>
+                        <i class="fa-solid fa-circle-question"></i> About Me
+                    </p>
+                </a>
+        </div>
+
+        <div id="infobox">
+            <div id="infoimg">
+                <img src="img/culture/event 2 parada/IMG_0186.JPG" alt="Event Image">
+            </div>
+
+            <div id="eventinfo">
+                <h2>Parada Sillimaniana</h2>
+                    <br>
+                <p>Date: <span id="eventdate">August 27, 2025 | 06:30PM </span></p>
+                <p>Organizer: <span id="eventorganizer">Silliman University</span></p>
+                <p>Event Type: <span id="eventtype">Culture</span></p>
+                <p>Points: <span id="eventpoints">[4] Lead Performer</span></p>
+            </div>
+        </div>
+
+        <div id="pardiv">
+            <div id="parbuttons">
+                <p class="tab-button active" data-tab="what">What</p>
+                <p class="tab-button" data-tab="sowhat">So What</p>
+                <p class="tab-button" data-tab="nowwhat">Now What</p>
+            </div>
+        
+            <div id="partext">
+                <div id="what" class="tab-content active">
+                    <p>
+The Parada Sillimaniana took place on August 27, 2025, at 6:30 PM during the Hibalag season. It was a school festival filled with parades, performances, and celebrations. I joined as part of our group’s presentation, working as one of the propsmen. After the parade, we performed at the Cimafranca Ballfield, which was one of the main highlights of the night.                    </p>
+                </div>
+                
+                <div id="sowhat" class="tab-content">
+                    <p>
+This event was honestly one of the most fun things I joined that semester. Even though I was just a propsman, I still felt part of something big. The atmosphere was lively and everyone was in a good mood. Seeing the crowd and all the different performances made it a really cool experience. It wasn’t hard work, but it did take a lot of coordination to make sure everything went smoothly. I really enjoyed being part of the team and helping out behind the scenes.                    </p>
+                </div>
+                
+                <div id="nowwhat" class="tab-content">
+                    <p>
+From this event, I learned that even small roles matter when you’re part of a big group performance. It made me appreciate teamwork and the effort people put in to make an event successful. I can apply that by continuing to help and participate in school activities, even in small ways. The benefit of this kind of event is that it strengthens school pride and builds friendships. If I could do it again, I’d definitely join next year too and maybe even try performing on stage.
+<br><br>
+Because of this activity, I am <strong>more appreciative of teamwork and school spirit.</strong>
+</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery">
+
+            <p>Gallery</p>
+
+            <div id="galimg">
+                <img src="img/culture/event 2 parada/288b6d7dca92cb03c17259190a01bdfe.jpeg" alt="">
+                <img src="img/culture/event 2 parada/img1.jpeg" alt="">
+                <img src="img/culture/event 2 parada/IMG_0178.JPG" alt="">
+                <img src="img/culture/event 2 parada/IMG_0180.JPG" alt="">
+                <img src="img/culture/event 2 parada/IMG_0186.JPG" alt="">
+                <img src="img/culture/event 2 parada/IMG_0290.JPG" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h4>Hosted on Github Pages</h4>
+        <p>[MMXXV]</p>
+    </footer>
+
+
+    <script>
+        // Wait for the document to be fully loaded before running script
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- This is your existing code for the tabs ---
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    
+                    const targetTabId = button.dataset.tab;
+                    const targetContent = document.getElementById(targetTabId);
+
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    button.classList.add('active');
+                    
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // --- NEW CODE ADDED BELOW ---
+
+            // 1. Find all images inside the #galimg container
+            const galleryImages = document.querySelectorAll('#galimg img');
+
+            // 2. Loop through each image
+            galleryImages.forEach(img => {
+                // 3. Add a click event listener
+                img.addEventListener('click', () => {
+                    // 4. Get the image src and open it in a new tab
+                    const imageSrc = img.src;
+                    window.open(imageSrc, '_blank');
+                });
+            });
+
+        });
+    </script>
+    </body>
+</html>

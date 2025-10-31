@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buñao Daycare Feeding Program | yaboifranz's WPE Journal</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <p>yaboifranz</p>
+        <h4>WPE Journal</h4>
+    </header>
+
+    <main>
+        <div id="headerbutton">
+            <a href="index.html">
+                    <p>
+                        <i class="fa-solid fa-house"></i> Home
+                    </p>
+                </a>
+
+                <a href="church.html">
+                    <p>
+                        <i class="fa-solid fa-place-of-worship"></i> Church
+                    </p>
+                </a>
+
+                <a href="classroom.html">
+                    <p>
+                        <i class="fa-solid fa-school-flag"></i> Classroom
+                    </p>
+                </a>
+
+                <a href="community.html">
+                    <p>
+                        <i class="fa-solid fa-handshake-angle"></i> Community
+                    </p>
+                </a>
+
+                <a href="court.html">
+                    <p>
+                        <i class="fa-solid fa-baseball-bat-ball"></i> Court
+                    </p>
+                </a>
+
+                <a href="culture.html">
+                    <p>
+                        <i class="fa-solid fa-feather-pointed"></i> Culture
+                    </p>
+                </a>
+
+                <a href="aboutme.html">
+                    <p>
+                        <i class="fa-solid fa-circle-question"></i> About Me
+                    </p>
+                </a>
+        </div>
+
+        <div id="infobox">
+            <div id="infoimg">
+                <img src="img/community/event 1 feeding/img4.jpeg" alt="Event Image">
+            </div>
+
+            <div id="eventinfo">
+                <h2>Buñao Daycare Feeding Program</h2>
+                    <br>
+                <p>Date: <span id="eventdate">September 24, 2025 | 04:00PM</span></p>
+                <p>Organizer: <span id="eventorganizer">Friend of the Philippine Blue Coast</span></p>
+                <p>Event Type: <span id="eventtype">Community</span></p>
+                <p>Points: <span id="eventpoints">[4] Lead Organizer/Host</span></p>
+            </div>
+        </div>
+
+        <div id="pardiv">
+            <div id="parbuttons">
+                <p class="tab-button active" data-tab="what">What</p>
+                <p class="tab-button" data-tab="sowhat">So What</p>
+                <p class="tab-button" data-tab="nowwhat">Now What</p>
+            </div>
+        
+            <div id="partext">
+                <div id="what" class="tab-content active">
+                    <p>
+The Buñao Daycare Feeding Program happened on September 24, 2025, at 4:00 PM. It was a community outreach activity where we got to feed and play with nursery kids. I was one of the hosts for the program and also helped with logistics, like guiding my team around and setting up. We served champorado and milk for the kids and spent time playing with them and making them laugh.                    </p>
+                </div>
+                
+                <div id="sowhat" class="tab-content">
+                    <p>
+Honestly, this was one of the best experiences I’ve had so far. It was just pure good vibes. Hosting was super fun, and the kids were so cute and energetic that you couldn’t help but smile the whole time. I felt like my inner child came back for a while. It surprised me how much happiness something that simple could bring. The hardest part was keeping the kids entertained since they had so much energy, but it was worth it. What I liked most was seeing them happy and being part of something meaningful.                    </p>
+                </div>
+                
+                <div id="nowwhat" class="tab-content">
+                    <p>
+This event reminded me how important it is to give back to the community, especially to kids who don’t have much. It made me realize that helping others doesn’t always have to be big — sometimes, small moments like this mean a lot. I can apply this by joining more outreach programs and continuing to volunteer whenever I can. If I could do it again, I definitely would, no question. It just felt good to be part of something that spreads joy.
+<br><br>
+Because of this activity, I am <strong>more grateful, kinder, and more connected to my inner child.</strong>
+</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery">
+
+            <p>Gallery</p>
+
+            <div id="galimg">
+                <img src="img/community/event 1 feeding/img1.jpeg" alt="">
+                <img src="img/community/event 1 feeding/img2.jpeg" alt="">
+                <img src="img/community/event 1 feeding/img3.jpeg" alt="">
+                <img src="img/community/event 1 feeding/img4.jpeg" alt="">
+                <img src="img/community/event 1 feeding/img5.jpeg" alt="">
+                <img src="img/community/event 1 feeding/IMG_1726.PNG" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h4>Hosted on Github Pages</h4>
+        <p>[MMXXV]</p>
+    </footer>
+
+
+    <script>
+        // Wait for the document to be fully loaded before running script
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- This is your existing code for the tabs ---
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    
+                    const targetTabId = button.dataset.tab;
+                    const targetContent = document.getElementById(targetTabId);
+
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    button.classList.add('active');
+                    
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // --- NEW CODE ADDED BELOW ---
+
+            // 1. Find all images inside the #galimg container
+            const galleryImages = document.querySelectorAll('#galimg img');
+
+            // 2. Loop through each image
+            galleryImages.forEach(img => {
+                // 3. Add a click event listener
+                img.addEventListener('click', () => {
+                    // 4. Get the image src and open it in a new tab
+                    const imageSrc = img.src;
+                    window.open(imageSrc, '_blank');
+                });
+            });
+
+        });
+    </script>
+    </body>
+</html>

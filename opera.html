@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Opera | yaboifranz's WPE Journal</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <p>yaboifranz</p>
+        <h4>WPE Journal</h4>
+    </header>
+
+    <main>
+        <div id="headerbutton">
+            <a href="index.html">
+                    <p>
+                        <i class="fa-solid fa-house"></i> Home
+                    </p>
+                </a>
+
+                <a href="church.html">
+                    <p>
+                        <i class="fa-solid fa-place-of-worship"></i> Church
+                    </p>
+                </a>
+
+                <a href="classroom.html">
+                    <p>
+                        <i class="fa-solid fa-school-flag"></i> Classroom
+                    </p>
+                </a>
+
+                <a href="community.html">
+                    <p>
+                        <i class="fa-solid fa-handshake-angle"></i> Community
+                    </p>
+                </a>
+
+                <a href="court.html">
+                    <p>
+                        <i class="fa-solid fa-baseball-bat-ball"></i> Court
+                    </p>
+                </a>
+
+                <a href="culture.html">
+                    <p>
+                        <i class="fa-solid fa-feather-pointed"></i> Culture
+                    </p>
+                </a>
+
+                <a href="aboutme.html">
+                    <p>
+                        <i class="fa-solid fa-circle-question"></i> About Me
+                    </p>
+                </a>
+        </div>
+
+        <div id="infobox">
+            <div id="infoimg">
+                <img src="img/classroom/event 3 art of opera/img1.jpeg" alt="Event Image">
+            </div>
+
+            <div id="eventinfo">
+                <h2>The Art of Opera</h2>
+                    <br>
+                <p>Date: <span id="eventdate">October 18, 2025 | 07:00PM</span></p>
+                <p>Organizer: <span id="eventorganizer">Silliman University Culture and Arts Council</span></p>
+                <p>Event Type: <span id="eventtype">Classroom</span></p>
+                <p>Points: <span id="eventpoints">[1] Spectator</span></p>
+            </div>
+        </div>
+
+        <div id="pardiv">
+            <div id="parbuttons">
+                <p class="tab-button active" data-tab="what">What</p>
+                <p class="tab-button" data-tab="sowhat">So What</p>
+                <p class="tab-button" data-tab="nowwhat">Now What</p>
+            </div>
+        
+            <div id="partext">
+                <div id="what" class="tab-content active">
+                    <p>
+This one was called The Art of Opera and happened on October 18, 2025, at 7:00 PM. It was basically a live opera performance we got to watch. It featured different pieces but the one that really stood out was “Votre Toast Je Peux Vous Le Rendre” from Carmen by G. Bizet, which was funny since it’s the one used in FNAF. I was just an audience member watching and appreciating the performances. We even took a photo with the cast after the show.                    </p>
+                </div>
+                
+                <div id="sowhat" class="tab-content">
+                    <p>
+To be real, I didn’t think I’d enjoy opera that much. I expected it to be boring or super fancy, but it was actually pretty cool. The live singing and music were impressive. The FNAF reference caught me off guard and lowkey made it more fun. It was nice seeing how much effort and talent go into something like that. The hardest part was probably sitting still for a long time, but it was worth it. The best part was seeing the energy of the performers since you could tell they really loved what they were doing. It gave me more appreciation for stage performances and music in general.                    </p>
+                </div>
+                
+                <div id="nowwhat" class="tab-content">
+                    <p>
+Watching the opera made me realize that classical music and art performances aren’t as boring as people make them out to be. I learned that sometimes you just have to give things a chance before judging them. I can apply that by being more open to new experiences, especially ones that seem not my thing at first. I’d definitely go to something like this again and maybe bring friends so it’s not as formal-feeling. I see the benefit of it since it exposes us to a different kind of art and shows that creativity can be expressed in a lot of ways. If I could do it again, I’d maybe dress up more for the vibe.
+<br><br>
+Because of this activity, I am <strong>more open to trying new stuff, even if it’s outside my usual interests.</strong>
+</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery">
+
+            <p>Gallery</p>
+
+            <div id="galimg">
+                <img src="img/classroom/event 3 art of opera/img1.jpeg" alt="">
+                <img src="img/classroom/event 3 art of opera/img2.jpeg" alt="">
+                <img src="img/classroom/event 3 art of opera/img3.jpeg" alt="">
+                <img src="img/classroom/event 3 art of opera/img4.jpeg" alt="">
+                <img src="img/classroom/event 3 art of opera/img5.jpeg" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h4>Hosted on Github Pages</h4>
+        <p>[MMXXV]</p>
+    </footer>
+
+
+    <script>
+        // Wait for the document to be fully loaded before running script
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- This is your existing code for the tabs ---
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    
+                    const targetTabId = button.dataset.tab;
+                    const targetContent = document.getElementById(targetTabId);
+
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    button.classList.add('active');
+                    
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // --- NEW CODE ADDED BELOW ---
+
+            // 1. Find all images inside the #galimg container
+            const galleryImages = document.querySelectorAll('#galimg img');
+
+            // 2. Loop through each image
+            galleryImages.forEach(img => {
+                // 3. Add a click event listener
+                img.addEventListener('click', () => {
+                    // 4. Get the image src and open it in a new tab
+                    const imageSrc = img.src;
+                    window.open(imageSrc, '_blank');
+                });
+            });
+
+        });
+    </script>
+    </body>
+</html>

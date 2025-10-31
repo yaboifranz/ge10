@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientation and Team Building | yaboifranz's WPE Journal</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <p>yaboifranz</p>
+        <h4>WPE Journal</h4>
+    </header>
+
+    <main>
+        <div id="headerbutton">
+            <a href="index.html">
+                    <p>
+                        <i class="fa-solid fa-house"></i> Home
+                    </p>
+                </a>
+
+                <a href="church.html">
+                    <p>
+                        <i class="fa-solid fa-place-of-worship"></i> Church
+                    </p>
+                </a>
+
+                <a href="classroom.html">
+                    <p>
+                        <i class="fa-solid fa-school-flag"></i> Classroom
+                    </p>
+                </a>
+
+                <a href="community.html">
+                    <p>
+                        <i class="fa-solid fa-handshake-angle"></i> Community
+                    </p>
+                </a>
+
+                <a href="court.html">
+                    <p>
+                        <i class="fa-solid fa-baseball-bat-ball"></i> Court
+                    </p>
+                </a>
+
+                <a href="culture.html">
+                    <p>
+                        <i class="fa-solid fa-feather-pointed"></i> Culture
+                    </p>
+                </a>
+
+                <a href="aboutme.html">
+                    <p>
+                        <i class="fa-solid fa-circle-question"></i> About Me
+                    </p>
+                </a>
+        </div>
+
+        <div id="infobox">
+            <div id="infoimg">
+                <img src="img/classroom/event 2 team building/img6.jpeg" alt="Event Image">
+            </div>
+
+            <div id="eventinfo">
+                <h2>Orientation and Team Building</h2>
+                    <br>
+                <p>Date: <span id="eventdate">August 13 2025 | 09:00AM</span></p>
+                <p>Organizer: <span id="eventorganizer">SUSG Research Committee</span></p>
+                <p>Event Type: <span id="eventtype">Classroom</span></p>
+                <p>Points: <span id="eventpoints">[3] Assistant Organizer</span></p>
+            </div>
+        </div>
+
+        <div id="pardiv">
+            <div id="parbuttons">
+                <p class="tab-button active" data-tab="what">What</p>
+                <p class="tab-button" data-tab="sowhat">So What</p>
+                <p class="tab-button" data-tab="nowwhat">Now What</p>
+            </div>
+        
+            <div id="partext">
+                <div id="what" class="tab-content active">
+                    <p>
+This event was the Orientation and Team Building of the SUSG Research Committee, held on August 13, 2025, at 9:00 AM. It was mostly about getting to know each other and planning what we’d do for the school year. I was part of the logistics and technical team, so I helped with setup and fixing any tech issues that popped up. Everyone in the org was there including the officers, new members, and a few facilitators. We played games, talked about our goals, and just had fun hanging out.                    </p>
+                </div>
+                
+                <div id="sowhat" class="tab-content">
+                    <p>
+I actually learned a bit about teamwork and how much behind-the-scenes work goes into making events run smoothly. At first, I expected it to be just long talks and introductions, but it turned out to be more interactive and fun. The games really helped break the ice and it made me realize that the org wasn’t as intimidating as I thought. The only part I didn’t enjoy was setting up some of the stuff since technical issues can get annoying, but seeing everything run well after was satisfying. I liked how everyone was friendly and easy to work with. It kind of showed me that even small roles matter when everyone’s doing their part.                    </p>
+                </div>
+                
+                <div id="nowwhat" class="tab-content">
+                    <p>
+The experience reminded me that teamwork really makes everything easier. I learned that being reliable and chill under pressure is pretty useful, especially in event setups. I’ll apply that next time by being more prepared for technical stuff and helping out where I can. I plan to keep being active in the org because it’s a good way to meet people and get experience outside of academics. I see the benefits since we build connections, learn how to organize events, and actually enjoy what we do. If I could do it again, I’d probably bring extra cables and snacks because both always run out.
+<br><br>
+Because of this activity, I am <strong>more confident working with a team and handling stuff behind the scenes.</strong>
+</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery">
+
+            <p>Gallery</p>
+
+            <div id="galimg">
+                <img src="img/classroom/event 2 team building/img1.jpeg" alt="">
+                <img src="img/classroom/event 2 team building/img2.jpeg" alt="">
+                <img src="img/classroom/event 2 team building/img3.jpeg" alt="">
+                <img src="img/classroom/event 2 team building/img4.jpeg" alt="">
+                <img src="img/classroom/event 2 team building/img5.jpeg" alt="">
+                <img src="img/classroom/event 2 team building/img6.jpeg" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h4>Hosted on Github Pages</h4>
+        <p>[MMXXV]</p>
+    </footer>
+
+
+    <script>
+        // Wait for the document to be fully loaded before running script
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- This is your existing code for the tabs ---
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    
+                    const targetTabId = button.dataset.tab;
+                    const targetContent = document.getElementById(targetTabId);
+
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    button.classList.add('active');
+                    
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // --- NEW CODE ADDED BELOW ---
+
+            // 1. Find all images inside the #galimg container
+            const galleryImages = document.querySelectorAll('#galimg img');
+
+            // 2. Loop through each image
+            galleryImages.forEach(img => {
+                // 3. Add a click event listener
+                img.addEventListener('click', () => {
+                    // 4. Get the image src and open it in a new tab
+                    const imageSrc = img.src;
+                    window.open(imageSrc, '_blank');
+                });
+            });
+
+        });
+    </script>
+    </body>
+</html>
